@@ -10,20 +10,47 @@ class Card(ICard):
     """
 
     def __init__(self, suit: CardSuit, rank: CardRank, face_up=True):
+        """
+        Initialize a new card with the specified suit type and rank value, facing up by default.
+
+        Args:
+            suit: the suit of the card (clubs, spades, diamonds, hearts)
+            rank: the rank of the card (2 to ace)
+            face_up: is the card facing up or not
+        """
         self._suit = suit
         self._rank = rank
         self._face_up = face_up
 
     @property
-    def suit(self):
+    def suit(self) -> CardSuit:
+        """
+        get the suit of the card
+
+        Returns:
+            CardSuit: the suit of the card
+        """
         return self._suit
 
     @property
-    def rank(self):
+    def rank(self) -> CardRank:
+        """
+        get the rank of the card
+
+        Returns:
+            CardRank: the rank of the card
+        """
         return self._rank
 
     @property
-    def face_up(self):
+    def face_up(self) -> bool:
+        """
+        returns a bool representing weather the card is facing up or not
+
+        Returns:
+            boot: True - card facing up, False - card facing down
+
+        """
         return self._face_up
 
     @override

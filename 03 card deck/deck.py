@@ -13,8 +13,8 @@ def fair_deck(func):
         result1 = func(*args, **kwargs)
         result2 = func(*args, **kwargs)
 
-        print("Shuffle Result 1:", result1)
-        print("Shuffle Result 2:", result2)
+        # print("Shuffle Result 1:", result1)
+        # print("Shuffle Result 2:", result2)
 
         if result1 != result2:
             return result1
@@ -28,8 +28,8 @@ class Deck(IDeck):
     def __init__(self, shuffle=True):
         self._cards = Deck.build_deck()
         self._index = 0
-        # if shuffle:
-        #     self.shuffle()
+        if shuffle:
+            self.shuffle()
 
     @property
     def cards(self):
