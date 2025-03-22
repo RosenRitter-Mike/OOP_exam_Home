@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b30fab5-2565-4052-b4c7-5faa494dff53" name="Changes" comment="exam_home_cards_described">
-      <change beforePath="$PROJECT_DIR$/03 card deck/card.py" beforeDir="false" afterPath="$PROJECT_DIR$/03 card deck/card.py" afterDir="false" />
+    <list default="true" id="0b30fab5-2565-4052-b4c7-5faa494dff53" name="Changes" comment="exam_home_cards_notes_added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 card deck/deck.py" beforeDir="false" afterPath="$PROJECT_DIR$/03 card deck/deck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03 card deck/deck_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/03 card deck/deck_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742648912850</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="exam_home_cards_notes_added">
+      <option name="closed" value="true" />
+      <created>1742657105164</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742657105164</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +138,7 @@
     <MESSAGE value="exam_home_cards 0.8" />
     <MESSAGE value="exam_home_cards 0.9" />
     <MESSAGE value="exam_home_cards_described" />
-    <option name="LAST_COMMIT_MESSAGE" value="exam_home_cards_described" />
+    <MESSAGE value="exam_home_cards_notes_added" />
+    <option name="LAST_COMMIT_MESSAGE" value="exam_home_cards_notes_added" />
   </component>
 </project>
