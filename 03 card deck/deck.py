@@ -38,7 +38,9 @@ class Deck(IDeck):
     @override
     @fair_deck
     def shuffle(self):
-        rnd.shuffle(self._cards)
+        # rnd.shuffle(self._cards)
+        new_deck = rnd.sample(self._cards, len(self._cards))
+        self._cards = new_deck
         return self._cards
 
     @override
