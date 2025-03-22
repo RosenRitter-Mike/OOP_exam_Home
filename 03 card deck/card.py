@@ -55,21 +55,52 @@ class Card(ICard):
 
     @override
     def flip(self) -> bool:
+        """
+        flips the card
+
+        Returns:
+            boot: True - card facing up, False - card facing down
+        """
         self._face_up = not self._face_up
         return self._face_up
 
     @override
     def get_display_name(self) -> str:
+        """
+        returns the display name of card
+
+        Returns:
+             str: the display name of the card
+        """
         if self._rank is None or self._suit is None:
             return "Invalid Card"
         return f"{self._rank} of {self._suit}"
 
     def __eq__(self, other):
+        """
+         Check if two cards are equal.
+
+         Args:
+             other: Another Card object to compare with.
+
+         Returns:
+             bool: True if the Cards have the same value and suit, False otherwise.
+         """
         if not isinstance(other, Card):
             raise TypeError("Can only compare Card with another Card")
         return self._rank == other.rank and self._suit == other.suit
 
     def __lt__(self, other):
+        """
+        Check if this Card has lower value than another.
+
+        Args:
+            other: Another Card object to compare with.
+
+        Returns:
+            bool: True if this card has lower rank value than the other, if rank values are equal
+             then if suit is lower, False otherwise.
+        """
         if not isinstance(other, Card):
             raise TypeError("Can only compare Card with another Card")
         elif self._rank == other.rank:
@@ -78,6 +109,16 @@ class Card(ICard):
             return self._rank < other.rank
 
     def __gt__(self, other):
+        """
+        Check if this Card has grater value than another.
+
+        Args:
+            other: Another Card object to compare with.
+
+        Returns:
+            bool: True if this card has grater rank value than the other, if rank values are equal
+             then if suit is grater, False otherwise.
+        """
         if not isinstance(other, Card):
             raise TypeError("Can only compare Card with another Card")
         elif self._rank == other.rank:
@@ -86,13 +127,31 @@ class Card(ICard):
             return self._rank > other.rank
 
     def __hash__(self):
+        """
+        hash function to hash the Card
+
+        Returns:
+             hash value of Card
+        """
         return hash((self._rank, self._suit))
 
     def __str__(self):
+        """
+        return card as str, if it is face up
+
+        Returns:
+         str: string representation of the card
+        """
         if self._face_up:
             return self.get_display_name()
         else:
             return "?"
 
     def __repr__(self):
+        """
+        a representation of Card creation
+
+        Returns:
+             the command and parameters to create this Card
+        """
         return f'Card({self._suit, self._rank, self._face_up})'
